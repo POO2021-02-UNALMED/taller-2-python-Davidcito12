@@ -39,7 +39,11 @@ class Auto:
         self.registro = registro
 
     def cantidadAsientos(self):
-        return len(self.asientos)
+        contador = 0
+        for asiento in self.asientos:
+            if asiento is Asiento:
+                contador += 1
+        return contador
 
     def verificarIntegridad(self):
         TESTCASE = self.registro
