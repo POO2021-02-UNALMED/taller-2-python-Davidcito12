@@ -41,7 +41,7 @@ class Auto:
     def cantidadAsientos(self):
         contador = 0
         for asiento in self.asientos:
-            if asiento is Asiento:
+            if asiento != None:
                 contador += 1
         return contador
 
@@ -51,7 +51,7 @@ class Auto:
             return "Las piezas no son originales"
 
         for asiento in self.asientos:
-            if asiento is Asiento:
+            if asiento != None:
                 if asiento.registro != TESTCASE:
                     return "Las piezas no son originales"
 
